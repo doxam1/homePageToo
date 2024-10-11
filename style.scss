@@ -1,0 +1,113 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+hr, p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.headerGraphic {
+  width: 100vw;
+  height: 25vh;
+  position: absolute;
+  transform: skewY(5deg);
+  transform-origin: top right;
+  top: 0;
+  background-image: linear-gradient(
+    to left,
+    hsl(207, 55%, 53%, 70%),
+    hsl(217, 18%, 62%, 30%)
+  );
+  z-index: -1111;
+}
+
+.container {
+  padding: 2em 0.5em;
+
+  &.hero {
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.4;
+
+    .hero_image {
+      position: relative;
+      text-align: center;
+    }
+    & .hero__imageHeader {
+      width: max-content;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -0%);
+      color: #fff;
+      font-size: max(0.5em, 5vw);
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.myWork {
+ background-color: hsl(45, 65%, 85%, 70%);
+  text-align: center;
+
+  & .myWork_grid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1em;
+
+    & .square {
+      background-color: hsl(200, 59%, 86%, 30%);
+      padding: 0.5em;
+      border-radius: 1em;
+      min-height: 200px;
+      box-shadow: 1px 1px 8px 1px hsl(0, 0%, 10%, 30%);
+    }
+  }
+}
+
+.footer {
+  min-height: 15vh;
+  background-image: linear-gradient(
+    to right,
+    hsl(207, 55%, 53%, 70%),
+    hsl(217, 18%, 62%, 30%)
+  );
+  display: flex;
+  align-items: center;
+
+  & footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+  & .contact {
+    padding: 1em;
+
+    & a {
+      text-decoration: none;
+      color: #535151;
+      font-size: 32px;
+
+      & ion-icon {
+        position: relative;
+        top: 8px;
+      }
+    }
+  }
+
+}
+}
